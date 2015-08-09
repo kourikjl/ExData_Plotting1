@@ -34,7 +34,7 @@ library(lubridate)
     lines (housepwr2$datetimecombo, housepwr2$submeter3,
            type = "l",
            col  = "blue")
-    legend("topright", pch = 1, 
+    legend("topright", pch = "----",
            col = c("black", "red", "blue"),
            legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
     par (new = FALSE)

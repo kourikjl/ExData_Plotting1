@@ -1,8 +1,7 @@
-
-
 ##------------ prepare data
     library(lubridate)
-## read in file (alternate techniques may be used for optimization)
+## read in file to working directory
+## (alternate techniques may be used for optimization)
     housepwr <- read.csv("household_power_consumption.txt", sep = ";",  stringsAsFactors = FALSE)
 ## select rows for two days Feb 1-2, 2007
     housepwr2  <- housepwr[(housepwr$Date %in% c("1/2/2007", "2/2/2007")),]
@@ -48,7 +47,7 @@
     lines (housepwr2$datetimecombo, housepwr2$submeter3,
            type = "l",
            col  = "blue")
-    legend("topright", pch = 1, cex = 0.9, bty = "n",
+    legend("topright", lty = c(1,1,1), cex = 0.9, bty = "n",
            col = c("black", "red", "blue"),
            legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
     par(new = FALSE)
